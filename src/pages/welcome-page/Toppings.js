@@ -23,16 +23,16 @@ const Toppings = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
             <h1>Sauces</h1>
             <p>2$</p>
             <h2 data-testid="price">Price: {cart.length * 2} $</h2>
-            <div className='container row gap-4'>
+            <div className='container row d-flex gap-4'>
                 {
                     sauces.map((sauce) => (
-                        <div className='col-3 d-flex flex-column align-items-center justify-content-between' style={{ width: "150px", minHeight: "200px" }}>
+                        <div className='col-3 d-flex flex-column align-items-center justify-content-between mx-5 ' style={{ width: "200px", minHeight: "200px" }}>
                             <img src={sauce.imagePath} className='w-100' />
-                            <label htmlFor={sauce.name}>{sauce.name}</label>
+                            <label className='my-3' htmlFor={sauce.name}>{sauce.name}</label>
                             <input
                                 id={sauce.name}
                                 type='checkbox'

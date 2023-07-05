@@ -29,12 +29,12 @@ const Scoops = () => {
             <h1>Types</h1>
             <p>3$</p>
             <h2 data-testid="price">Types Price: {cart.length * 3} $ </h2>
-            <div className='row d-flex gap-4'>
+            <div className='row container d-flex m-auto gap-4'>
                 {
                     types.map((type) => {
                         const amount = itemAmount(type);
                         return (
-                            <div className='col-3 d-flex flex-column align-items-center mx-5' style={{ maxWidth: "200px" }}>
+                            <div className='col-3 d-flex flex-column align-items-center mx-5 ' style={{ maxWidth: "200px" }}>
                                 <img id={type.name} className='w-100' src={type.imagePath} alt='type' />
                                 <label htmlFor={type.name}>{type.name}</label>
                                 <div className='d-flex gap-3 my-3'>
